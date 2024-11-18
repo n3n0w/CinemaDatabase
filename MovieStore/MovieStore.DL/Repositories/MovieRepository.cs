@@ -1,6 +1,7 @@
 ﻿using MovieStore.DL.Interfaces;
 using MovieStore.DL.StaticDB;
 using MovieStore.Models.DTO;
+using MovieStore.Models.Requests;
 
 namespace MovieStore.DL.Repositories
 {

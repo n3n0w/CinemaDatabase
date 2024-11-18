@@ -1,4 +1,5 @@
 ﻿using MovieStore.Models.DTO;
+using MovieStore.Models.Requests;
 
 namespace MovieStore.DL.StaticDB
 {
