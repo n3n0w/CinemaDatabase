@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStore", "MovieStore\MovieStore.csproj", "{0D4F22DC-9398-4807-AE51-0F016C0930CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore", "MovieStore\MovieStore.csproj", "{0D4F22DC-9398-4807-AE51-0F016C0930CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStore.BL", "MovieStore.BL\MovieStore.BL.csproj", "{7E7E238B-2DA5-40FC-9DA8-D1AA0C70B672}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.BL", "MovieStore.BL\MovieStore.BL.csproj", "{7E7E238B-2DA5-40FC-9DA8-D1AA0C70B672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStore.DL", "MovieStore.DL\MovieStore.DL.csproj", "{8E8B4916-2708-4E29-BE2C-ECF94C2CDF95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.DL", "MovieStore.DL\MovieStore.DL.csproj", "{8E8B4916-2708-4E29-BE2C-ECF94C2CDF95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStore.Models", "MovieStore.Models\MovieStore.Models.csproj", "{E4A890ED-9224-4B05-863B-C21B19C1355D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStore.Models", "MovieStore.Models\MovieStore.Models.csproj", "{E4A890ED-9224-4B05-863B-C21B19C1355D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
