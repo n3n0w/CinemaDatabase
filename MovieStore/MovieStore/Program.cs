@@ -16,7 +16,11 @@ namespace MovieStore
             builder.Services
                 .RegisterDataLayer()
                 .RegisterBusinessLayer();
+
+
             builder.Services.AddMapster();
+
+
             MapsterConfiguration.Configure();
 
             builder.Services.AddControllers();

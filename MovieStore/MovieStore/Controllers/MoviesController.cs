@@ -26,6 +26,13 @@ namespace MovieStore.Controllers
             return _movieService.GetAllMovies();
         }
 
+
+        [HttpGet("GetById")]
+        public Movie? GetById(int id)
+        {
+            return _movieService.GetById(id);
+        }
+
         [HttpPost("Add")]
         public void Add(AddMovieRequest movie)
         {
