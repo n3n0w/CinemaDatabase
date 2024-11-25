@@ -4,6 +4,7 @@ using MovieStore.BL.Interfaces;
 using MovieStore.DL.Interfaces;
 using MovieStore.Models.DTO;
 using MovieStore.Models.Requests;
+using System.Net;
 
 namespace MovieStore.Controllers
 {
@@ -21,29 +22,57 @@ namespace MovieStore.Controllers
         }
 
         [HttpGet("GetAll")]
-        public IEnumerable<Movie> GetAll()
+        public IActionResult GetAll()
         {
-            return _movieService.GetAllMovies();
+            var result = _movieService.GetAllMovies();
+
+            if (result == null || result.Count == 0)
+            {
+                return NotFound("No movies found");
+            }
         }
 
 
         [HttpGet("GetById")]
-        public Movie? GetById(int id)
+        [ProducesResponseType<Movie>(StatusCode.Status200OK)]
+        [ProducesResponseType<Movie>(StatusCode.Status404NotFound)]
+        public IActionResult GetById(int id)
         {
-            return _movieService.GetById(id);
+            if (id == 0)
+            {
+                return BadRequest("Id must be greater than 0");
+            }
+
+            var result = _movieService.GetById(id);
+
+            if (result == null)
+            {
+                return NotFound($"Movie with ID:{id} not fount");
+            }
         }
 
         [HttpPost("Add")]
-        public void Add(AddMovieRequest movie)
+        public IActionResult Add(AddMovieRequest movie)
         {
-            var mapperDto = _mapper.Map<Movie>(movie);
+            try
+            {
+                var movieDTO = _mapper.Map<Movie>(movie);
 
-            _movieService.AddMovie(mapperDto);
-        }
-        [HttpDelete("Delete")]
-        public void Delete(int id)
-        {
-            _movieService.deleteMovie(id);
+                if (movieDTO == null) {
+                    return BadRequest("Can`t convert movie");
+                }
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+            [HttpDelete("Delete")]
+            public IActionResult Delete(int id)
+            {
+                if (id == 0)
+                {
+                    return BadRequest("Id must be greater than 0");
+                }
+            }
         }
     }
 }
