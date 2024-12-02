@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieStore.BL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace MovieStore.BL.Services
 {
     internal class MoviesBLService
     {
+        private readonly IMovieService _movieService;
     }
 }
