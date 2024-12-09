@@ -27,5 +27,10 @@ namespace MovieStore.BL.Services
         {
             return _movieRepository.GetMovieById(id);
         }
+
+        public object GetDetailedMovies()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

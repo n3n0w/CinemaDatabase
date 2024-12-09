@@ -26,7 +26,7 @@ namespace MovieStore.Controllers
 
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [HttpGet("GetAll")]
+        [HttpGet("GetAllMovieWithDetails")]
         public IActionResult Get()
         {
             var result = _movieService.GetAllMovies();
