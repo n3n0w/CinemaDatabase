@@ -43,13 +43,13 @@ namespace MovieStore.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
-            _logger.LogError($"Getting movie with ID:{id}");
-            if (id <= 0)
+            if (string.IsNullOrEmpty(id))
             {
-                return BadRequest("Id must be greater than 0");
+                return BadRequest("Id can't be null or empty");
             }
+
 
             var result = _movieService.GetById(id);
 
