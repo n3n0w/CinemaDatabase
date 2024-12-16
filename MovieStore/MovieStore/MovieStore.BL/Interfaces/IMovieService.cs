@@ -8,7 +8,6 @@ namespace MovieStore.BL.Interfaces
 
         void AddMovie(Movie movie);
 
-        Movie? GetById(int id);
-        object GetDetailedMovies();
+        Movie? GetById(string id);
     }
 }
