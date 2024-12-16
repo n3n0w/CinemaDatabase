@@ -61,7 +61,7 @@ namespace MovieStore.Controllers
             return Ok(result);
         }
 
-        [HttpPost("Add")]
+        [HttpPost("AddINNNN")]
         public IActionResult Add(AddMovieRequest movie)
         {
             try
