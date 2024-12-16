@@ -36,7 +36,6 @@ namespace MovieStore.BL.Services
                     Actors = _actorRepository.GetActorsByIds(movie.Actors)
                 };
 
-                actors.AddRange(movie.Actors.Select(id => _actorRepository.GetById(id)));
                 movieView.Actors = actors;
 
                 result.Add(movieView);

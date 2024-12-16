@@ -12,7 +12,7 @@ namespace MovieStore.BL.Services
         {
             _movieRepository = movieRepository;
         }
-        
+
         public List<Movie> GetAllMovies()
         {
             return _movieRepository.GetAllMovies();
@@ -23,14 +23,9 @@ namespace MovieStore.BL.Services
             _movieRepository.AddMovie(movie);
         }
 
-        public Movie? GetById(int id)
+        public Movie? GetById(string id)
         {
             return _movieRepository.GetMovieById(id);
-        }
-
-        public object GetDetailedMovies()
-        {
-            throw new NotImplementedException();
         }
     }
 }

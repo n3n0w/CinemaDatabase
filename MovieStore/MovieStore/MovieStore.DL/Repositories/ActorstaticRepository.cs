@@ -7,8 +7,23 @@ namespace MovieStore.DL.Repositories
     {
         public IEnumerable<Actor> GetActorsByIds(IEnumerable<int> actorsIds)
         {
-            throw new NotImplementedException();
+            var result = new List<Actor>();
+
+            foreach (var actorsId in actorsIds)
+            {
+                foreach (var actor in StaticDB.InMemoryDb.Actors)
+                {
+                    if (actor.Id == actorsId)
+                    {
+                        result.Add(actor);
+                    }
+                }
+            }
+
+            return result;
+
         }
+
 
         public Actor? GetById(int id)
         {

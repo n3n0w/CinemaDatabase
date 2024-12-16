@@ -1,10 +1,10 @@
-﻿using MovieStore.DL.Interfaces;
-using MovieStore.DL.StaticDB;
+﻿using MovieStore.DL.StaticDB;
 using MovieStore.Models.DTO;
 
 namespace MovieStore.DL.Repositories
 {
-    internal class MovieRepository : IMovieRepository
+    [Obsolete]
+    internal class MovieStaticRepository 
     {
         public List<Movie> GetAllMovies()
         {
@@ -13,6 +13,9 @@ namespace MovieStore.DL.Repositories
 
         public void AddMovie(Movie movie)
         {
+            if (movie == null) return;
+
+            movie.Id = Guid.NewGuid().ToString();
             InMemoryDb.Movies.Add(movie);
         }
 
@@ -21,7 +24,7 @@ namespace MovieStore.DL.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Movie? GetMovieById(int id)
+        public Movie? GetMovieById(string id)
         {
            return InMemoryDb.Movies
                .FirstOrDefault(m => m.Id == id);
