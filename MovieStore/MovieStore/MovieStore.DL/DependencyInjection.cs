@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MovieStore.DL.Interfaces;
 using MovieStore.DL.Repositories;
+using MovieStore.DL.Repositories.MongoRepositories;
 
 namespace MovieStore.DL
 {
