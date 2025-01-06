@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using MovieStore.DL.Interfaces;
-using MovieStore.Models.Configurations;
 using MovieStore.Models.DTO;
 
 namespace MovieStore.DL.Repositories.MongoRepositories
