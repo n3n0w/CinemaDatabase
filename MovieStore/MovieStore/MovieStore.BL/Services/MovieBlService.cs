@@ -26,8 +26,6 @@ namespace MovieStore.BL.Services
 
             foreach (var movie in movies)
             {
-                var actors = new List<Actor>(movie.Actors.Count());
-
                 var movieView = new MovieView
                 {
                     MovieId = movie.Id,
@@ -35,8 +33,6 @@ namespace MovieStore.BL.Services
                     MovieYear = movie.Year,
                     Actors = _actorRepository.GetActorsByIds(movie.Actors)
                 };
-
-                movieView.Actors = actors;
 
                 result.Add(movieView);
             }
