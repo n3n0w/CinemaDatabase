@@ -11,5 +11,10 @@ namespace MovieStore.Models.Views
         public int MovieYear { get; set; }
 
         public IEnumerable<Actor> Actors { get; set; } = [];
+
+        public static implicit operator MovieView(MovieView v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
