@@ -2,6 +2,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Mapster;
 using MovieStore.BL;
+using MovieStore.BL;
 using MovieStore.MapsterConfig;
 using MovieStore.Validators;
 using Serilog;
@@ -57,6 +58,7 @@ namespace MovieStore
             app.MapControllers();
 
             app.Run();
+            return;
         }
     }
 }
